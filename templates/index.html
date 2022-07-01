@@ -1,3 +1,17 @@
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "b21be70e-fe60-47e0-82e7-239102a0c663", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "f9829475-7541-497f-8203-0cf268c2db52", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+    document.head.appendChild(t);
+  });
+</script>
+
 <html >
 <head>  
   <title>AutoAI Flask Deployment Tutorial</title>
