@@ -19,7 +19,7 @@ def predict():
    
     ####################### FROM AUTOAI DEPLOYMENT API #######################
     # NOTE: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
-    API_KEY = "JFEp-T-YU4Wsdf5bxxTILX1avq0HTCdO0t4P_EMt-RNm"
+    API_KEY = "ZpwVKIWDjwK9PBvTWAD1Gcxs3lzcS_TAMHwaamUmf5r3"
     token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey":
      API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
     mltoken = token_response.json()["access_token"]
@@ -76,8 +76,8 @@ def predict():
                     None ]]
         }]}
 
-    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/7a871bb8-b73b-4099-b4b5-34ff8a331883/predictions?version=2022-06-30', json=payload_scoring,
-     headers={'Authorization': 'Bearer ' + mltoken})
+    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/6745567c-da54-4234-ac10-ddaf959aedb9/predictions?version=2022-06-23', json=payload_scoring,
+    headers={'Authorization': 'Bearer ' + mltoken})
     print("Scoring response")
     print(response_scoring.json())
     ####################### END OF AUTOAI DEPLOYMENT API #######################
